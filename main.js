@@ -449,7 +449,7 @@ function restartGame() {
   renderHands({ withDealAnimation: true });
   initDragAndDrop();
 
-  // ✅ 完整刷新生命、分数、手牌数量
+  // 刷新生命、分数、手牌数量
   renderLives();
   updateScoreDisplay();
   updateHandCount();
@@ -497,7 +497,7 @@ function resetBattle() {
   updateHandCount();
   renderLives();
 }
-// === 动画 & UI 小工具 ===
+// === 动画 
 
 function animateLifeLoss(side) {
   const icons = DOM.lives[side].querySelectorAll('.life-icon');
@@ -515,7 +515,7 @@ function abilityNotice(side, ability) {
       : 'Dont kick the baby!敌方踢出一个加拿大儿童,并对您的一张卡牌造成了致命伤害！',
     confuse: isPlayer
       ? '您的吟游诗人歌唱并趁机偷走了敌方卡牌。'
-      : '敌方的吟游诗人歌唱并趁机偷走了您的卡牌,stupid asshole!',
+      : '敌方的吟游诗人歌唱并趁机偷走了您的卡牌,Goddamn bastard!',
     princess: isPlayer
       ? 'kenny公主魅惑了敌人并对其造成群体伤害'
       : 'Kenny公主魅惑了我们!(我方全体数值-1)'
